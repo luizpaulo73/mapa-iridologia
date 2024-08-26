@@ -1,0 +1,29 @@
+.fundo {
+    height: 70vh;
+    width: 80vw;
+    background-color: whitesmoke;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-around;
+}
+.inputs input {
+    width: 30%;
+    height: 100px;
+}
+
+.img-inputada {
+    height: 95%;
+}
+
+.mascara-olho {
+    position: absolute;
+    width: 40%;
+    z-index: 999;
+}
