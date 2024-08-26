@@ -70,18 +70,29 @@ export default function Principal() {
     setTamanhoOlho(e.target.value);
   }
 
+  const [opacidade , setOpacidade] = useState(1);
+
+  function handleOpacidade() {
+    if (opacidade === 1) {
+      setOpacidade(0);
+  } else {
+    setOpacidade(1);
+  }
+}
+
   return (
     <>
       <h1 ref={tituloRef} className="titulo">Iris Diag</h1>
 
       <div className="fundo" ref={divFundoRef}>
-        <img src={listaMascara[olho]} alt="" className="mascara-olho" style={{ transform: `translateX(${posicaoX}px) translateY(${posicaoY}px) scale(${tamanhoMascara/100})` }}/>
+        <img src={listaMascara[olho]} alt="" className="mascara-olho" style={{ transform: `translateX(${posicaoX}px) translateY(${posicaoY}px) scale(${tamanhoMascara/100})`, opacity: `${opacidade}`}}/>
         {img && <img src={img} alt="Preview" className="img-inputada" style={{transform: `scale(${tamanhoOlho/100})`}}/>}
       
       <div className="botoes">
       <button onClick={telaCheia}>Tela Cheia</button>
       <input type="file" onChange={handleImageUpload} />
       <button onClick={handleOlho} >Mudar Máscara</button>
+      <button onClick={handleOpacidade} id="botaoOpacidade">Alterar Opacidade</button>
       
       <label htmlFor="inputFile">
         
