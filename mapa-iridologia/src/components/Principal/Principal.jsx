@@ -1,9 +1,9 @@
 import "./Principal.css";
 import { useState, useRef, useEffect } from "react";
-import olhoEsq from "../img/irise.gif";
-import olhoDir from "../img/irisd.gif";
-import olhoEsqBr from "../img/irise-branco.png";
-import olhoDirBr from "../img/irisd-branco.png";
+import olhoEsq from "/img/irise.gif";
+import olhoDir from "/img/irisd.gif";
+import olhoEsqBr from "/img/irise-branco.png";
+import olhoDirBr from "/img/irisd-branco.png";
 
 export default function Principal() {
   const [img, setImg] = useState(null);
