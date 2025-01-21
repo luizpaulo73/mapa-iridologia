@@ -4,8 +4,8 @@ import olhoEsq from "/img/irise.gif";
 import olhoDir from "/img/irisd.gif";
 import olhoEsqBr from "/img/irise-branco.png";
 import olhoDirBr from "/img/irisd-branco.png";
+import irisCor from "/img/iris-cor.png";
 
-import olhoImg from "/img/eye.png";
 import opacidadeImg from "/img/blend.png";
 import mascaraImg from "/img/layers.png"
 
@@ -14,13 +14,13 @@ export default function Principal() {
   const divFundoRef = useRef(null);
 
   const [olho, setOlho] = useState(0);
-  const listaMascara = [olhoEsq, olhoDir, olhoEsqBr, olhoDirBr];
+  const listaMascara = [olhoEsq, olhoDir, olhoEsqBr, olhoDirBr, irisCor];
 
   const handleOlho = () => {
     setOlho((prev) => (prev + 1) % listaMascara.length);
   };
 
-  const [posicaoX, setPosicaoX] = useState(0);
+  const [posicaoX, setPosicaoX] = useState(530);
   const [posicaoY, setPosicaoY] = useState(0);
   const [tamanhoMascara, setTamanhoMascara] = useState(100);
   const [tamanhoOlho, setTamanhoOlho] = useState(100);
